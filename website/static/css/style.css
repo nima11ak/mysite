@@ -64,7 +64,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
-    font-smoothing: antialiased;
+    -font-smoothing: antialiased;
 }
 * {
     margin: 0;
@@ -83,6 +83,7 @@ body {
     color: #999;
     overflow-x: hidden !important;
     background: #1b1b1b;
+    padding-top: 80px;
 }
 p {
     font-family: 'Outfit', sans-serif;
@@ -7092,4 +7093,14 @@ height: 100% !important;
 .modal-header .btn-close:active {
     outline: none;
     box-shadow: none;
+}
+
+body {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
+}
+
+.main-content {
+  flex-grow: 1 !important;
 }

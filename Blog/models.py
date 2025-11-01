@@ -1,6 +1,6 @@
 from django.db import models
 
-class post(models.Model):
+class Post(models.Model):
     title = models.CharField(max_length=100)
     content =models.TextField()
 
@@ -20,8 +20,8 @@ class post(models.Model):
 
     class Meta:
         ordering =['created_date']
-        verbose_name = 'پست'
-        verbose_name_plural = 'پستها'
+        verbose_name = 'POST'
+        verbose_name_plural = 'Posts'
 
     def __str__(self):
         return self.title

@@ -16,8 +16,6 @@ class Post(models.Model):
 
 
 
-    
-
     class Meta:
         ordering =['created_date']
         verbose_name = 'POST'

@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>test</title>
-
 </head>
 <body>
 
-        {{posts}}
+    
+   <p>{{post.title}}</p>
 
-        {% for post in posts %}
-        <h1>{{post.title}}</h1>
-        <p>{{post.content}}</p>
-        <p>{{post.counted_view}}</p>
-        <small>{{post.published_date}}</small>
-        {% endfor %}
+
 </body>
 </html>

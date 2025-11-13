@@ -31,8 +31,8 @@
                         <div class="wrapper">
                             <div class="date"> <a href="#">{{post.published_date}}</a> </div>
                             <div class="con">
-                                <div class="category"> <a href="#"><i class="ti-user"></i>mehdi D.</a> <a href="#"><i
-                                            class="ti-comment"></i>{{post.counted_view}}</a> </div>
+                                <div class="category"> <a href="#"><i class="ti-user"></i>{{post.counted_views}}</a> <a href="#"><i
+                                            class="ti-comment"></i></a> </div>
                                 <div class="text">  <a href="{% url 'Blog:blog_single' post.id %}">{{post.title}}</a> </div> <a
                                     href="#" class="icon-btn"><i class="ti-arrow-top-right"></i></a>
                                     {{post.content}}  

@@ -27,20 +27,38 @@
                 {% for post in posts %}
                 <div class="col-lg-4 col-md-6 mb-45">
                     <div class="item">
-                        <div class="img"> <img src="{% static 'img/blog/03.jpg' %}" alt=""> </div>
+                        
+                        <div class="img">
+                            <a href="{% url 'Blog:single' pid=post.id %}">
+                                <img src="{{ post.image.url }}" alt="">
+                            </a>
+                        </div>
+
                         <div class="wrapper">
-                            <div class="date"> <a href="#">{{post.published_date}}</a> </div>
+                            <div class="date">
+                                <a href="#">{{ post.published_date|date:"d M Y" }}</a>
+                            </div>
+                            
                             <div class="con">
-                                <div class="category"> <a href="#"><i class="ti-user"></i>{{post.counted_views}}</a> <a href="#"><i
-                                            class="ti-comment"></i></a> </div>
-                                <div class="text">  <a href="{% url 'Blog:blog_single' post.id %}">{{post.title}}</a> </div> <a
-                                    href="#" class="icon-btn"><i class="ti-arrow-top-right"></i></a>
-                                    {{post.content}}  
+                                <div class="category">
+                                    <a href="#"><i class="ti-user"></i>{{ post.author }}</a>
+                                </div>
+                                
+                                <div class="text">
+                                    <a href="{% url 'Blog:single' pid=post.id %}">
+                                        {{ post.title }}
+                                    </a>
+                                </div>
+                                
+                                <a href="{% url 'Blog:single' pid=post.id %}" class="icon-btn">
+                                    <i class="ti-arrow-top-right"></i>
+                                </a>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+        {% endfor %}
 
                 <div class="col-lg-4 col-md-6 mb-45">
                     <div class="item">
